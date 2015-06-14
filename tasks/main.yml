@@ -1,0 +1,3 @@
+---
+include: install.yml   tags: gocd_server_install
+include: configure.yml tags: gocd_server_configure
