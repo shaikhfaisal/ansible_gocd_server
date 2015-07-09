@@ -1,0 +1,4 @@
+---
+gocd_packages:
+  - openjdk-7-jre
+  - go-server

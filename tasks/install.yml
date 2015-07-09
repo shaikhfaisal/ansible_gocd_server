@@ -1,11 +1,17 @@
 ---
 - name: Add debian repo for gocd
   apt_repository:
-    repo: 'http://dl.bintray.com/gocd/gocd-deb/'
+    repo: 'deb https://dl.bintray.com/gocd/gocd-deb /'
     state: 'present'
 
-- name: Install gocd_server
+- name: Add apt key for repo
+  apt_key:
+    state: present
+    url: https://bintray.com/user/downloadSubjectPublicKey?username=gocd
+
+- name: Install gocd_server packages
   apt:
-    name: gocd-server
-    update_cache: yes
+    name: "{{ item }}"
     state: latest
+    update_cache: yes
+  with_items: gocd_packages

@@ -1,0 +1,8 @@
+---
+- name: Ensure go-server binds to ipv4
+  lineinfile:
+    dest: /etc/default/go-server
+    line: export _JAVA_OPTIONS="-Djava.net.preferIPv4Stack=true"
+    state: present
+  notify:
+    - restart go-server
