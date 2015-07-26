@@ -2,5 +2,5 @@
 - hosts: '{{ hosts }}'
   sudo: yes
   roles:
-    - ansible_go_server
+    - ansible_gocd_server
 
