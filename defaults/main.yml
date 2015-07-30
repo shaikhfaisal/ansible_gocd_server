@@ -2,3 +2,5 @@
 gocd_packages:
   - openjdk-7-jre
   - go-server
+
+gocd_agent_autoregister_key: "oM.4LW^25aiN(Y`Z8N1~D(QYs#g00+"

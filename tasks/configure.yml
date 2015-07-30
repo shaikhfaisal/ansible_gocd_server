@@ -6,3 +6,10 @@
     state: present
   notify:
     - restart go-server
+
+- name: Drop in go-server config file
+  template:
+    src: cruise-config.xml.j2
+    dest: /etc/go/cruise-config.xml
+  notify:
+    - restart go-server
